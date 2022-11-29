@@ -1,12 +1,11 @@
 import React from "react";
+import { useGlobalContext } from "./context";
 
 export const Submenu = () => {
+  const { isSubmenuOpen, openSbmenu, closeSubmenu } = useGlobalContext();
   return (
-    <aside className="submenu">
-      <section>
-        <h4>nesto</h4>
-        <div className="submenu-center"></div>
-      </section>
+    <aside className={`${isSubmenuOpen ? "submenu show" : "submenu"}`}>
+      submenu
     </aside>
   );
 };

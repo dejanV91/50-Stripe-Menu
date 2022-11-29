@@ -1,7 +1,8 @@
 import React from "react";
 import phoneImage from "./images/phone.svg";
-
+import { useGlobalContext } from "./context";
 export const Hero = () => {
+  const { closeSubmenu } = useGlobalContext();
   return (
     <>
       <section className="hero">
