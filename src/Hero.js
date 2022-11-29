@@ -1,5 +1,6 @@
 import React from "react";
 import phoneImage from "./images/phone.svg";
+
 export const Hero = () => {
   return (
     <>

@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Submenu />
-      <Sidebar />
       <Hero />
+      <Sidebar />
+      <Submenu />
     </>
   );
 }
