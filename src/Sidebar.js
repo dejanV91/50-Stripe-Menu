@@ -21,6 +21,7 @@ const Sidebar = () => {
             return (
               <article key={index}>
                 <h4>{page}</h4>
+                {/* Next  function */}
               </article>
             );
           })}
