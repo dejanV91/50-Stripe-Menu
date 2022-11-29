@@ -1,11 +1,11 @@
 import React from "react";
 import logo from "./images/logo.svg";
-import data from "./data";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 
 export const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
+
   const displaySumbenu = (e) => {
     const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
@@ -13,10 +13,17 @@ export const Navbar = () => {
     const bottomBtn = tempBtn.bottom - 3;
     openSubmenu(page, { centerBtn, bottomBtn });
   };
+
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains("link-btn")) {
+      closeSubmenu();
+    }
+  };
+
   return (
     <>
       <nav className="nav">
-        <div className="nav-center">
+        <div className="nav-center" onMouseOver={handleSubmenu}>
           <div className="nav-header">
             <img className="nav-logo" src={logo} alt="logo" />
             <button className="btn toggle-btn" onClick={openSidebar}>
